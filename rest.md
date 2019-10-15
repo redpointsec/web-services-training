@@ -33,7 +33,7 @@ $ python3 linkfinder.py -i "http://3.17.173.103/main.js"
 ```
 4. Findings will open in browser
 
-![LinkFinder-output.png](:storage/2ff271b5-9a1d-4110-bb69-53d1dbe3a8dc/8eeaea68.png)
+![LinkFinder-output.png](https://github.com/redpointsec/web-services-training/blob/master/images/rest/LinkFinder-output.png?raw=true)
 
 
 ### Find Swagger
