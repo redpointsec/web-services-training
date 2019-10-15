@@ -1,5 +1,6 @@
 # Soap
 ### Description
+Enumerate WSDL file and look at other vulnerabilities within the SOAP Requests
 ### Tool
 #### Burp Suite Pro - Intruder
 http://portswigger.net - HTTP Intercepting Proxy for interacting with web apps.
