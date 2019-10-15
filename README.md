@@ -1,5 +1,4 @@
 # Web Services Setup
-![sc-logo-2019.svg](https://www.saintcon.org/assets/images/sc-logo-2019.svg =200x)
 
 ## Software Needed
 [Download Burp Suite Community Edition - PortSwigger](https://portswigger.net/burp/communitydownload)
