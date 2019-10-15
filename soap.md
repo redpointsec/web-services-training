@@ -63,5 +63,5 @@ OR in the case of DVWS simply searching the source with developer tools will rev
 | ----- | ----- |
 | DVWS | http://localhost/dvws/ |
 | WSDL Scanning, find as many users as possible| :star: | 
-| XPATH Injection, become Admin | :star: | 
+| Username Enumeration | :star::star: | 
 | XXE 2 how about some /etc/passwd | :star::star: |
