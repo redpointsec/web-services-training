@@ -7,6 +7,11 @@
 * Owasp Zap [Downloads · zaproxy/zaproxy Wiki · GitHub](https://github.com/zaproxy/zaproxy/wiki/Downloads)
 
 #### Other
+[SecLists](https://github.com/danielmiessler/SecLists)
+```sh
+git clone git@github.com:danielmiessler/SecLists.git
+```
+
 [LinkFinder: A python script that finds endpoints in JavaScript files](https://github.com/GerbenJavado/LinkFinder)
 
 ```sh
