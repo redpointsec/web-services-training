@@ -15,6 +15,7 @@ $ cd LinkFinder
 $ python setup.py install
 ```
 
+## Labs
 We will have an AWS environment spun up for each lab but we cannot guarantee that it will be available. We have run into issues before where requests were blocked by the conference network to AWS. Therefore, we recommend running the labs locally. This will require Docker. 
 
 Docker is the easiest way to run these labs but not the only way. 
