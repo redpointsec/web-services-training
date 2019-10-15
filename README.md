@@ -59,3 +59,5 @@ cd poc-graphql
 mvn package
 java -jar graphql-poc.jar
 ```
+
+!This is a 2 hour training so we don't have a lot of time to triage and help setup environments for everyone, please come prepared with these things already downloaded and running 
