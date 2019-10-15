@@ -25,7 +25,7 @@ brew install sqlmap
 1. Open Juice Shop and intercept traffic with proxy
 2. Look in the proxy for the main.js file and copy url to file
 
-![find-js-file.png](:storage/2ff271b5-9a1d-4110-bb69-53d1dbe3a8dc/5f34f8ec.png)
+![find-js-file.png](https://github.com/redpointsec/web-services-training/blob/master/images/rest/find-js-file.png?raw=true)
 
 3. Open terminal and run linkfinder with copied url
 ```sh
@@ -41,9 +41,9 @@ $ python3 linkfinder.py -i "http://3.17.173.103/main.js"
 ```sh 
 site:demo.testfire.net inurl:swagger
 ```
-![google-swagger.png](:storage/2ff271b5-9a1d-4110-bb69-53d1dbe3a8dc/1cbf592a.png)
+![google-swagger.png](https://github.com/redpointsec/web-services-training/blob/master/images/rest/google-swagger.png?raw=true)
 
-![altoro-swagger.png](:storage/2ff271b5-9a1d-4110-bb69-53d1dbe3a8dc/6f53f58f.png)
+![altoro-swagger.png](https://github.com/redpointsec/web-services-training/blob/master/images/rest/altoro-swagger.png?raw=true)
 
 
 | Challenge | Difficulty |
