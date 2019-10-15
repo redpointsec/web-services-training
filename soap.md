@@ -1,6 +1,5 @@
-# Insecure Webservices
+# Soap
 ### Description
-Webservices are typically vulnerable to the same issues such as IDOR, SQLi or Enumerations. 
 ### Tool
 #### Burp Suite Pro - Intruder
 http://portswigger.net - HTTP Intercepting Proxy for interacting with web apps.
