@@ -1,10 +1,12 @@
 # Web Services Setup
 
 ## Software Needed
+#### Intercepting Proxy
 * [Download Burp Suite Community Edition - PortSwigger](https://portswigger.net/burp/communitydownload)
 * [Request a free trial for Burp Suite Professional - PortSwigger](https://portswigger.net/requestfreetrial/pro) (If you want to a 30 day free trial of Burp Pro signup a few days before class because their process is not instant)
 * Owasp Zap [Downloads · zaproxy/zaproxy Wiki · GitHub](https://github.com/zaproxy/zaproxy/wiki/Downloads)
 
+#### Other
 [LinkFinder: A python script that finds endpoints in JavaScript files](https://github.com/GerbenJavado/LinkFinder)
 
 ```sh
