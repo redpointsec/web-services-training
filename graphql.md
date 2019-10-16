@@ -8,7 +8,7 @@ https://github.com/righettod/poc-graphql
 
 | Attack Type | Application | Location | Tool |
 | ---- | ---- | ---- | ---- |
-| [Authorization (broken access control)](#authorization--broken-access-control-) | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
+| [Authorization (broken access control)](#authorization--broken-access-control) | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 | Injection | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 | Resource Enhaustion| poc-graphql | http://127.0.0.1:8080/graphql |graphiql, proxy   |
 | Data Exposure| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
