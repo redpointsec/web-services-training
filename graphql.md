@@ -9,12 +9,12 @@ https://github.com/righettod/poc-graphql
 | Attack Type | Application | Location | Tool |
 | ---- | ---- | ---- | ---- |
 | [Authorization (broken access control)](#authorization-broken-access-control) | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
-| Injection | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
-| Resource Enhaustion| poc-graphql | http://127.0.0.1:8080/graphql |graphiql, proxy   |
-| Data Exposure| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
-| Data Exposure| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
-| IDOR| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
-| Data Exposure| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
+| [Injection](#injection)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
+| [Resource exhaustion](#resource-exhaustion)| poc-graphql | http://127.0.0.1:8080/graphql |graphiql, proxy   |
+|[Exposure of private data](#exposure-of-private-data)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
+| [Exposure of technical information in case of unexpected error](#exposure-of-technical-information-in-case-of-unexpected-error) | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
+| [Insecure Direct Object Reference (IDOR)](#insecure-direct-object-reference--idor-)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
+| [Exposure of the API to the wrong sphere of clients](#exposure-of-the-api-to-the-wrong-sphere-of-clients)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 
 The labs conditions and assumptions:
 
