@@ -19,8 +19,9 @@ $ git clone https://github.com/GerbenJavado/LinkFinder.git
 $ cd LinkFinder
 $ python setup.py install
 ```
-[Sqlmap Download](https://github.com/sqlmapproject/sqlmap/zipball/master)
-
+Sqlmap
+[Download](https://github.com/sqlmapproject/sqlmap/zipball/master)
+or
 ```
 brew install sqlmap
 ```
