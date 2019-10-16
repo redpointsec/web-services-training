@@ -10,10 +10,10 @@ https://github.com/righettod/poc-graphql
 | ---- | ---- | ---- | ---- |
 | [Authorization (broken access control)](#authorization-broken-access-control) | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 | [Injection](#injection)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
-| [Resource exhaustion](#resource-exhaustion)| poc-graphql | http://127.0.0.1:8080/graphql |graphiql, proxy   |
+| [Resource exhaustion](#resource-exhaustion) *only run on local App*| poc-graphql | http://127.0.0.1:8080/graphql |graphiql, proxy   |
 |[Exposure of private data](#exposure-of-private-data)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 | [Exposure of technical information in case of unexpected error](#exposure-of-technical-information-in-case-of-unexpected-error) | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
-| [Insecure Direct Object Reference (IDOR)](#insecure-direct-object-reference--idor-)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
+| [Insecure Direct Object Reference (IDOR)](#insecure-direct-object-reference-idor)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 | [Exposure of the API to the wrong sphere of clients](#exposure-of-the-api-to-the-wrong-sphere-of-clients)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 
 The labs conditions and assumptions:
@@ -191,7 +191,7 @@ I receive this GraphQL response that reflect my payload, so, depending on the Gr
 * Ensure that the client rendering the data from GraphQL response apply escaping/sanitization on data prior to render them.
 
 ### Resource exhaustion
-
+*Only run this on local app*
 [CWE-400](https://cwe.mitre.org/data/definitions/400.html)
 
 #### Issue
