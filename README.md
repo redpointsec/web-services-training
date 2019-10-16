@@ -20,8 +20,11 @@ $ cd LinkFinder
 $ python setup.py install
 ```
 Sqlmap
+
 [Download](https://github.com/sqlmapproject/sqlmap/zipball/master)
+
 or
+
 ```
 brew install sqlmap
 ```
