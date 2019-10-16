@@ -260,7 +260,7 @@ query dos {
 }
 ```
 
-![PROOF00](docs/PROOF00.png)
+![PROOF00](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF00.png)
 
 #### Reco
 
@@ -273,7 +273,7 @@ For the Java implementation, add these 2 instrumentations classes to the executi
 * [Protection against Query Complexity](https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java)
 * [Protection against Query Deep](https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/analysis/MaxQueryDepthInstrumentation.java)
 
-See this [class](src/main/java/eu/righettod/graphqlpoc/Application.java) for an example of usage of the 2 instrumentations above.
+See this [class](https://github.com/righettod/poc-graphql/raw/master/src/main/java/eu/righettod/graphqlpoc/Application.java) for an example of usage of the 2 instrumentations above.
 
 **For Mutation/Subscription:**
 
@@ -302,11 +302,11 @@ In my lab, this [url](http://localhost:8080/graphql/schema.json) allow to obtain
 
 Using the **Documentation Explorer** panel, i have found this field:
 
-![PROOF01](docs/PROOF01.png)
+![PROOF01](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF01.png)
 
-![PROOF02](docs/PROOF02.png)
+![PROOF02](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF02.png)
 
-![PROOF03](docs/PROOF03.png)
+![PROOF03](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF03.png)
 
 #### Reco
 
@@ -363,7 +363,7 @@ I receive this reponse that it inform me that i have acted on the system and cau
 
 Return a generic error if an unexpected error is meet, like for example **Query cannot be processed!**
 
-See an example into this [class](src/main/java/eu/righettod/graphqlpoc/security/ErrorHandler.java).
+See an example into this [class](https://github.com/righettod/poc-graphql/raw/master/src/main/java/eu/righettod/graphqlpoc/security/ErrorHandler.java).
 
 ### Insecure Direct Object Reference (IDOR)
 
@@ -379,9 +379,9 @@ The GraphQL API Query/Mutation/Subscription proposed by my labs is vulnerable to
 
 Using the **Documentation Explorer** of GraphiQL we see that the identifier are simple integer and are sequential:
 
-![PROOF04](docs/PROOF04.png)
+![PROOF04](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF04.png)
 
-![PROOF05](docs/PROOF05.png)
+![PROOF05](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF05.png)
 
 Request query to detect IDOR:
 
@@ -464,7 +464,7 @@ When using GraphQL implementation server to build your GraphQL API, it can happe
 
 In my lab it is the case because, by default, a WebSocket endpoint is exposed on the path `/subscriptions` and do not require any authentication (see this [doc](https://www.howtographql.com/basics/2-core-concepts/) precisely the section *Realtime Updates with Subscriptions*):
 
-![PROOF08](docs/PROOF08.png)
+![PROOF08](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF08.png)
 
 Clients can obtain access to API data via this endpoint if the schema declare subscriptions in the `Subscription` section.
 
@@ -472,7 +472,7 @@ Clients can obtain access to API data via this endpoint if the schema declare su
 
 I can see the subscriptions exposed via the schema:
 
-![PROOF09](docs/PROOF09.png)
+![PROOF09](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF09.png)
 
 If I send this subscription request to receive event from the *newAssociation* subscription:
 
@@ -518,7 +518,7 @@ After a moment, i receive this notification in response to my subscription:
 }
 ```
 
-![PROOF10](docs/PROOF10.png)
+![PROOF10](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF10.png)
 
 ##### Cross-Origin Resource Sharing default enabling
 
@@ -565,9 +565,9 @@ Date: Sat, 05 Jan 2019 16:23:47 GMT
 
 Call from a browser:
 
-![PROOF06](docs/PROOF06.png)
+![PROOF06](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF06.png)
 
-![PROOF07](docs/PROOF07.png)
+![PROOF07](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF07.png)
 
 #### Reco
 
