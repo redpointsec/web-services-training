@@ -52,7 +52,7 @@ site:demo.testfire.net inurl:swagger
 | Find  App Configuration | :star: |
 | SQL Injection | :star::star: | 
 | Look in another users basket | :star::star: | 
-| Altoro jsmith:demo1234 | http://demo.testfire.net/swagger/index.html#/|
+| Altoro jsmith:demo1234 | http://demo.testfire.net/|
 | Insecure Direct Object Reference | :star::star: |
 
 
