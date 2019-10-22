@@ -10,7 +10,6 @@ https://github.com/righettod/poc-graphql
 | ---- | ---- | ---- | ---- |
 | [Authorization (broken access control)](#authorization-broken-access-control) | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 | [Injection](#injection)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
-| [Resource exhaustion](#resource-exhaustion) *only run on local App*| poc-graphql | http://127.0.0.1:8080/graphql |graphiql, proxy   |
 |[Exposure of private data](#exposure-of-private-data)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 | [Exposure of technical information in case of unexpected error](#exposure-of-technical-information-in-case-of-unexpected-error) | poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
 | [Insecure Direct Object Reference (IDOR)](#insecure-direct-object-reference-idor)| poc-graphql | http://18.222.70.104:8080/graphql |graphiql, proxy   |
@@ -190,95 +189,6 @@ I receive this GraphQL response that reflect my payload, so, depending on the Gr
 * Apply input validation on data received via Query/Mutation/Subscription prior to use it
 * Ensure that the client rendering the data from GraphQL response apply escaping/sanitization on data prior to render them.
 
-### Resource exhaustion
-*Only run this on local app*
-[CWE-400](https://cwe.mitre.org/data/definitions/400.html)
-
-#### Issue
-
-As the client control the amount of data requested it can send a GrapQL request to a query that cause a resource exhaustion on the storages called by the GraphQL server along the GraphQL server itself for the serialization of data to JSON.
-
-This issue can also happen using a mutation by sending a large amount of data in the parameters (input validation can used here to prevent this attack).
-
-This issue can also happen using a subscription by either:
-
-* Register a large amount of subscribers and on each subscription exposed.
-* Send a large amount of data in the parameters used by the subscriptions.
-
-In my labs I have a vulnerability on this point for query, precisely in the query `allDogs(onlyFree: Boolean = false, limit: Int = 500): [Dog!]` that is available for anonymous user and retrieve the content of the DB about the Dog. As there a relation between Dogs and a Veterinary and the reverse then it's possible to perform cascading call causing resource exhaustion at SQL level on the DB.
-
-**Example:**
-
-When I send this request, I cause my CPU to go to 100% during several minutes and my DB is local because it's an SQLite
-
-```javascript
-query dos {
-  allDogs(onlyFree: false, limit: 1000000) {
-    id
-    name
-    veterinary {
-      id
-      name
-      dogs {
-        id
-        name
-        veterinary {
-          id
-          name
-          dogs {
-            id
-            name
-            veterinary {
-              id
-              name
-              dogs {
-                id
-                name
-                veterinary {
-                  id
-                  name
-                  dogs {
-                    id
-                    name
-                    veterinary {
-                      id
-                      name
-                      dogs {
-                        id
-                        name
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-![PROOF00](https://github.com/righettod/poc-graphql/raw/master/docs/PROOF00.png)
-
-#### Reco
-
-**For Query:**
-
-Depending on the implementation of GraphQL server used, use the built-in protection provided for **Maximum Query Depth** & **Query Complexity** (see [specs here](https://www.howtographql.com/advanced/4-security/)).
-
-For the Java implementation, add these 2 instrumentations classes to the execution strategy:
-
-* [Protection against Query Complexity](https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java)
-* [Protection against Query Deep](https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/analysis/MaxQueryDepthInstrumentation.java)
-
-See this [class](https://github.com/righettod/poc-graphql/raw/master/src/main/java/eu/righettod/graphqlpoc/Application.java) for an example of usage of the 2 instrumentations above.
-
-**For Mutation/Subscription:**
-
-* Use input validation to limit the size of the incoming accepted data.
-* Add subscribers limit at code level.
 
 ### Exposure of private data
 
