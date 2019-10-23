@@ -1,4 +1,4 @@
-*http://3.17.173.103/#/* 
+
 
 # REST Services Walkthrough Exercises
 
@@ -19,7 +19,7 @@ brew install sqlmap
 
 | Attack Type | Application | Location | Tool |
 | ---- | ---- | ---- | ---- |
-| Find REST API Endpoints | JuiceShop | http://juicshop:80/main.js |  Linkfinder |
+| Find REST API Endpoints | JuiceShop | http://3.17.173.103:80/main.js |  Linkfinder |
 |Find Swagger| Altoro | [Altoro]()https://demo.testfire.net)| Linkfinder |
 
 ### Find REST API Endpoints
