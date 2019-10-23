@@ -1,3 +1,5 @@
+*http://13.59.214.75/dvws/*
+
 # Soap
 ### Description
 Enumerate WSDL file and look at other vulnerabilities within the SOAP Requests
