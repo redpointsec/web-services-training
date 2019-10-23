@@ -1,4 +1,4 @@
-*http://13.59.214.75/dvws/*
+
 
 # Soap
 ### Description
@@ -17,8 +17,8 @@ https://portswigger.net/bappstore/594a49bb233748f2bc80a9eb18a2e08f
 
 | Attack Type | Application | Location | Tool |
 | ---- | ---- | ---- | ---- |
-| WSDL Enumeraton, find WSDL file | DVWS | http://localhost/dvws/vulnerabilities/wsdlenum/ |  intruder/WSDLER |
-| XML External Entity Injection  | DVWS | http://localhost/dvws/vulnerabilities/xxe/ | intruder |
+| WSDL Enumeraton, find WSDL file | DVWS | http://13.59.214.75/dvws/vulnerabilities/wsdlenum/ |  intruder/WSDLER |
+| XML External Entity Injection  | DVWS | http://13.59.214.75/dvws/vulnerabilities/xxe/ | intruder |
 ###  WSDL Enumeraton
 The common format is http://localhost.com/someservice?wsdl
 
