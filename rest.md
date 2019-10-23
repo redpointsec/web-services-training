@@ -1,3 +1,5 @@
+*http://3.17.173.103/#/* 
+
 # REST Services Walkthrough Exercises
 
 ### Description
