@@ -53,7 +53,7 @@ WSDLER reveals the private services of the wsdl.
 OR in the case of DVWS simply searching the source with developer tools will reveal the wsdl endpoint. 
 ![Inspect Source](https://github.com/justinlarson/Web-App-Hacking-Workshop/raw/master/img/dvws-inspect-source.png)
  
-### XML External Entity Injection (not a SOAP call)
+### XML External Entity Injection 
 1. Go to the XML External Entity Processing link in DVWS
 ![XXE](https://github.com/justinlarson/Web-App-Hacking-Workshop/raw/master/img/dvws-xml-injection.png)
 2. Add payload to input box and submit
@@ -66,4 +66,4 @@ OR in the case of DVWS simply searching the source with developer tools will rev
 | ----- | ----- |
 | DVWS | http://localhost/dvws/ |
 | Internal WSDL Function, find as many users as possible| :star: | 
-| XXE 2 how about some /etc/passwd (not SOAP) | :star::star: |
+| XXE 2 how about some /etc/passwd  | :star::star: |
